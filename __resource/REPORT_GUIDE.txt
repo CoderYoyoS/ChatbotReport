@@ -19,6 +19,8 @@ GOAL -> Reader understands that we have justified why bots are worth the effort
 Method ->
 This is a high level view. no complicated stuff!
 
+NEXT SECTION IS WHERE WE TALK ABOUT WHAT WE CHOSE, only make reference to them here
+
 How developers make bots:
 	Review on:
 	Dev tools:
