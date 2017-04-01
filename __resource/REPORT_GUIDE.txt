@@ -4,14 +4,14 @@ Leave the intro for a while…. I’m gonna write this on Wednesday depending on
 Literature review ->
 Here’s all the core things that we need to research
 
-	- Why backend and API development is awesome
-	- Why microservices are so good
-	- Why testing and debugging is easier if we take this approach
 	- The App boom is over and why developing new apps is a loosing battle
-	- Why Chatbots are good, what do they do?
+	- Why Chatbots are good, what do they actually do?
 	- Chatbots are the next thing
 	- Reference the chatbot that helps people appeal parking tickets and the ebay bot
 	- Facebook Messenger is the biggest messaging platform and thats why we’ll do it here
+	- Why backend and API development is the way things are going
+	- Why microservices are so good
+	- Why testing and debugging is easier if we take this approach
 	
 	Just google the above, pick the first article, and cite!
 
