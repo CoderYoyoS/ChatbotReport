@@ -15,7 +15,7 @@ Here’s all the core things that we need to research
 	
 	Just google the above, pick the first article, and cite!
 
-GOAL -> Reader understands that we have justified why bots are worth the effort
+GOAL -> Reader understands that we have justified why bots and api development are worth the effort
 ——————————————————————————————————————————————————————————————————————————————
 Method ->
 This is a high level view. no complicated stuff!
@@ -31,8 +31,8 @@ How developers make bots:
 		- Bot devs use Data usually document db’s, why?
 		- Bot devs use version control and continuous integrartion, why?(I’ll get Travis working FACT)
 		- Bot devs use es6 -> es5 transpilers, why?
-		- Bot devs use tools to test their api end points, why?
-		- Bot devs use documentation tools when building api’s, why?
+		- Bot devs use tools to test their api end points(POSTMAN), why?
+		- Bot devs use documentation tools when building api’s(SWAGGER or another one you choose), why?
 		- Whatever other types of tools you want
 
 	Conversational flow:
@@ -46,7 +46,7 @@ How developers make bots:
 	Architecture:
 		Bot devs use a microservice architecture to implement these things, why?
 
-GOAL -> Reader understands that what type of tools developers are using now and what will be required to get a bot going
+GOAL -> Reader understands that what type of tools, architectures developers are using now and what will be required to get a bot going
 ——————————————————————————————————————————————————————————————————————————————
 System Requirements and Specification ->
 	Tools:
@@ -97,10 +97,9 @@ GOAL -> Reader understands how our app works at the lower levels
 
 ——————————————————————————————————————————————————————————————————————————————
 
-Implementation of Prototype
+Implementation 
 
-		-PULL RELEVANT STUFF FROM OLD REPORT(in resource folder)
-		- Just use bus as an example
+	LEAVE BLANK
 ——————————————————————————————————————————————————————————————————————————————
 
 Testing and evaluation
