@@ -39,7 +39,7 @@ How developers make bots:
 		Bot devs use Bot engines - why? what do they do?
 		Is NLP reliable with todays tools? Probably not that much,technology is improving but maybe we want a mixture of both ie general chit chat is NLP and our apis we’ll write all the logic
 
-GOAL -> Reader understands that what type of tools will be required to get a bot going
+GOAL -> Reader understands that what type of tools developers are using now and what will be required to get a bot going
 ——————————————————————————————————————————————————————————————————————————————
 System Requirements and Specification ->
 
