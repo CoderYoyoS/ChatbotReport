@@ -15,7 +15,7 @@ Here’s all the core things that we need to research
 	
 	Just google the above, pick the first article, and cite!
 
-GOAL -> Reader understands that we have justified why bots are worth the effort
+GOAL -> Reader understands that we have justified why bots and api development are worth the effort
 ——————————————————————————————————————————————————————————————————————————————
 Method ->
 This is a high level view. no complicated stuff!
