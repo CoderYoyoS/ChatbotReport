@@ -4,6 +4,3 @@ Image with sizing params
     
 Image with citation(no sizing params)   
 ![Sample Image. \label{sample}](04_assets/00_introduction/sample.jpg)
-
-In-line citation   
-Smith [@Tan:2007jm] writes about how wonderful Pandoc is. 

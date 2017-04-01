@@ -1,0 +1,98 @@
+INTRO ->
+Leave the intro for a while…. I’m gonna write this on Wednesday depending on where we are
+——————————————————————————————————————————————————————————————————————————————
+Literature review ->
+Here’s all the core things that we need to research
+
+	- Why backend and API development is awesome
+	- Why microservices are so good
+	- Why testing and debugging is easier if we take this approach
+	- The App boom is over and why developing new apps is a loosing battle
+	- Chatbots are the next thing
+	- Reference the chatbot that helps people appeal parking tickets and the ebay bot
+	- Facebook Messenger is the biggest messaging platform and thats why we’ll do it here
+	
+	Just google the above, pick the first article, and cite!
+
+GOAL -> Reader understands that we have justified why bots are worth the effort
+——————————————————————————————————————————————————————————————————————————————
+Method ->
+This is a high level view. no complicated stuff!
+
+How developers make bots:
+	Review on:
+	Dev tools:
+	Bot devs use A PaaS(Platform as a service) i.e Heroku, Docker, Azure to deploy
+	their tools and technologies:
+		- Bot devs use server-side languages, why?
+		- Bot devs use Data usually document db’s, why?
+		- Bot devs use version control and continuous integrartion, why?(I’ll get Travis working FACT)
+		- Bot devs use es6 -> es5 transpilers, why?
+		- Bot devs use tools to test their api end points, why?
+		- Bot devs use documentation tools when building api’s, why?
+		- Whatever other types of tools you want
+
+	Conversational flow:
+		Bot devs use NLP or logic driven bots(does the bot run on NLP or if else statements)?some do, some dont
+		Bot devs use Bot engines - why? what do they do?
+		Is NLP reliable with todays tools? Probably not that much,technology is improving but maybe we want a mixture of both ie general chit chat is NLP and our apis we’ll write all the logic
+
+GOAL -> Reader understands that what type of tools will be required to get a bot going
+——————————————————————————————————————————————————————————————————————————————
+System Requirements and Specification ->
+
+	We chose:
+	Heroku because, free, easy-to-use, give X amount of RAM, CPU, savage with Github etc
+	Node becasue single-threaded, event loop, perfect for chat, javascript etc
+	Mongo because document DB, elastic, perfect for this becasue x
+	Github, perfect with heroku and travis
+	Babel because we’re preparing for an event where standards change
+	Postman to test our api end points
+	Swagger so we can have kickass docs to hand off to our front-end engineers	
+
+GOAL -> Reader understands what tools we chose and why
+——————————————————————————————————————————————————————————————————————————————
+
+System Design ->
+
+	I’ll get this done on WEDNESDAY so dont sweat this part
+
+	(forget the diagrams!)
+
+	Architecture:
+		Overview:
+		Consists of 3 apis and a driver app, facebook and a bot engine
+		Example of request flow
+
+		Data:
+		Each Api has a DB
+		Example of db query
+		Example of a schema
+
+		Build:
+		How all tools handle their jobs
+		Example of build execution flow
+
+		Conversation
+		How the bot engine handles a request,
+		How our logic in our apis handle a request
+		Example of conversation flow
+
+GOAL -> Reader understands how our app works at the lower levels
+
+——————————————————————————————————————————————————————————————————————————————
+
+Implementation of Prototype
+
+		-PULL RELEVANT STUFF FROM OLD REPORT(in resource folder)
+		- Just use bus as an example
+——————————————————————————————————————————————————————————————————————————————
+
+Testing and evaluation
+		
+	LEAVE BLANK
+——————————————————————————————————————————————————————————————————————————————
+
+Conclusions and Further Work
+	LEAVE BLANK
+——————————————————————————————————————————————————————————————————————————————

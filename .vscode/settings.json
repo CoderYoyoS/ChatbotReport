@@ -1,0 +1,8 @@
+// Place your settings in this file to overwrite default and user settings.
+
+{
+    "editor.fontFamily": "Arial, 'Courier New', monospace",
+    "files.autoSave": "onFocusChange",
+    "editor.wordWrap": "on"
+    
+}
