@@ -39,11 +39,17 @@ How developers make bots:
 		Bot devs use NLP or logic driven bots(does the bot run on NLP or if else statements)?some do, some dont
 		Bot devs use Bot engines - why? what do they do?
 		Is NLP reliable with todays tools? Probably not that much,technology is improving but maybe we want a mixture of both ie general chit chat is NLP and our apis we’ll write all the logic
+		
+	Feature Selection:
+		Bot devs look at a problem and the FAQ's around them, conduct surveys ask questions and get feedback
+		
+	Architecture:
+		Bot devs use a microservice architecture to implement these things, why?
 
 GOAL -> Reader understands that what type of tools developers are using now and what will be required to get a bot going
 ——————————————————————————————————————————————————————————————————————————————
 System Requirements and Specification ->
-
+	Tools:
 	We chose:
 	Heroku because, free, easy-to-use, give X amount of RAM, CPU, savage with Github etc
 	Node becasue single-threaded, event loop, perfect for chat, javascript etc
@@ -52,13 +58,19 @@ System Requirements and Specification ->
 	Babel because we’re preparing for an event where standards change
 	Postman to test our api end points
 	Swagger so we can have kickass docs to hand off to our front-end engineers	
+	Architecture:
+		We chose a decoupled api archiecture because easier to collab, debug, more secure etc
+		Bus, Gym, Library are the services
+	Features:
+	We conducted surveys to find out the best features for our app and individually for each service
+	(AGAIN, NO DIAGRAMS DONT WORRY)
 
-GOAL -> Reader understands what tools we chose and why
+GOAL -> Reader understands what tools, features and architecture we chose and why
 ——————————————————————————————————————————————————————————————————————————————
 
 System Design ->
 
-	I’ll get this done on WEDNESDAY so dont sweat this part
+	***I’ll get this done on WEDNESDAY so dont sweat this part***
 
 	(forget the diagrams!)
 
