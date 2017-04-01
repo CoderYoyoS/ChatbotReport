@@ -46,7 +46,7 @@ How developers make bots:
 	Architecture:
 		Bot devs use a microservice architecture to implement these things, why?
 
-GOAL -> Reader understands that what type of tools developers are using now and what will be required to get a bot going
+GOAL -> Reader understands that what type of tools, architectures developers are using now and what will be required to get a bot going
 ——————————————————————————————————————————————————————————————————————————————
 System Requirements and Specification ->
 	Tools:
