@@ -32,7 +32,7 @@ How developers make bots:
 		- Bot devs use version control and continuous integrartion, why?(I’ll get Travis working FACT)
 		- Bot devs use es6 -> es5 transpilers, why?
 		- Bot devs use tools to test their api end points(POSTMAN), why?
-		- Bot devs use documentation tools when building api’s, why?
+		- Bot devs use documentation tools when building api’s(SWAGGER or another one you choose), why?
 		- Whatever other types of tools you want
 
 	Conversational flow:
