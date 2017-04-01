@@ -8,6 +8,7 @@ Here’s all the core things that we need to research
 	- Why microservices are so good
 	- Why testing and debugging is easier if we take this approach
 	- The App boom is over and why developing new apps is a loosing battle
+	- Why Chatbots are good, what do they do?
 	- Chatbots are the next thing
 	- Reference the chatbot that helps people appeal parking tickets and the ebay bot
 	- Facebook Messenger is the biggest messaging platform and thats why we’ll do it here
