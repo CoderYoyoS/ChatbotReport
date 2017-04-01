@@ -97,10 +97,9 @@ GOAL -> Reader understands how our app works at the lower levels
 
 ——————————————————————————————————————————————————————————————————————————————
 
-Implementation of Prototype
+Implementation 
 
-		-PULL RELEVANT STUFF FROM OLD REPORT(in resource folder)
-		- Just use bus as an example
+	LEAVE BLANK
 ——————————————————————————————————————————————————————————————————————————————
 
 Testing and evaluation
