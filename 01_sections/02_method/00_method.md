@@ -1,7 +1,7 @@
 # Method
+A chat bot is a conversational computer application, driven by a set of rules and sometimes artificial intelligence that a user interacts with via a chat interface. This service can facilitate any number of thing, stretching from practical to fun (Chatbot Magazine, 2017). In addition, Facebook, WeChat and others alike have opened up API’s to create these applications to be housed and work within their messaging applications.  This offers developers a change to avoid the overwhelmed app store and reach any number of clients (ChatBot Weekly, 2017). To develop this type of service there are a number of technologies, services and development tools required to successfully do so. The following section will outline and detail the many different technologies and architectures used in creating Chat Bots. Furthermore, it will also look at other aspects such as feature selection (what the application will be able to talk about) and how conversation flow is achieved within a chat bot (ruled based or AI).
 
-This is the Method section  
+One major and core aspect in the development of a chat bot application is deployment technologies. On selecting a deployment platform for a chat bot there are a number of considerations to keep in mind such as scalability, complexity and cost. However, there are a number deployment solutions for bots that offers Platform as a service (PaaS). Some of these include Microsoft Azure Bot Services, Google App Engine, Heroku and Docker. PaaS is a cloud based technology that delivers a platform as well as hardware, software and tools to allow developers to easily deploy and run Chat applications over the internet (site 3). Bot developers can take advantage and use the PaaS environments from conception to the development of their bot applications.
 
-Insert empty line at end of section
 
   
