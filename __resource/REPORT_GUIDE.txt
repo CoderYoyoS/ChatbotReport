@@ -55,15 +55,19 @@ System Requirements and Specification ->
 	Node becasue single-threaded, event loop, perfect for chat, javascript etc
 	Mongo because document DB, elastic, perfect for this becasue x
 	Github, perfect with heroku and travis
+	
 	Babel because we’re preparing for an event where standards change
 	Postman to test our api end points
+	
 	Swagger so we can have kickass docs to hand off to our front-end engineers	
+	
 	Architecture:
 		We chose a decoupled api archiecture because easier to collab, debug, more secure etc
 		Bus, Gym, Library are the services
+	
 	Features:
-	We conducted surveys to find out the best features for our app and individually for each service
-	(AGAIN, NO DIAGRAMS DONT WORRY)
+		We conducted surveys to find out the best features for our app and individually for each service
+		(AGAIN, NO DIAGRAMS DONT WORRY)
 
 GOAL -> Reader understands what tools, features and architecture we chose and why
 ——————————————————————————————————————————————————————————————————————————————
