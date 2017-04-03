@@ -1,0 +1,3 @@
+### MongDB
+
+MongoDB is a non relational databse that uses document-oriented storage. MongoDB Documents objects are similar to JavaScript Object Notation in the sense that they share the same syntax.Three main advantages are prominent when using MongoDB: The objects stored in the documents correspond to the data types in many languages, Polymorphism is supports as because of dymanic schemas and lastly, Arrays
