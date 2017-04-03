@@ -211,7 +211,7 @@ public class Build {
         ProcessBuilder builder = new ProcessBuilder(
 				"cmd.exe", "/c"+"pandoc --latex-engine=xelatex -H "+
 				"_config/preamble.tex -V fontsize=10pt -V documentclass:book"+
-				" -V papersize:a4paper -V classoption:openright --number-sections"+
+				" -V papersize:a4paper -V classoption:oneside --number-sections "+
 				frontmatpaths+
 				"_config/toc.md "+
 				intropaths+
