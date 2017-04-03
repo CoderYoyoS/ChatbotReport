@@ -12,3 +12,5 @@ Simplifying Deployment on the Cloud with Heroku." Open Source FOR You, 1 Apr. 20
 Dyno Types | Heroku Dev Center. 2017. Dyno Types | Heroku Dev Center. [ONLINE] Available at: https://devcenter.heroku.com/articles/dyno-types. [Accessed 03 April 2017].
 
 Add-ons | Heroku Dev Center. 2017. Add-ons | Heroku Dev Center. [ONLINE] Available at: https://devcenter.heroku.com/articles/add-ons. [Accessed 03 April 2017].
+
+Heroku Local | Heroku Dev Center. 2017. Heroku Local | Heroku Dev Center. [ONLINE] Available at: https://devcenter.heroku.com/articles/heroku-local. [Accessed 03 April 2017].

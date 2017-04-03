@@ -5,4 +5,13 @@ Heroku is an online Platform as a service (PaaS). A PaaS can be defined as a ser
 A singular instance of an application running on Heruko is refered as a dynos. Each dynos, on a free plan, consists of a quad core central processing unit, 512 Megabytes of random access memory (RAM) and 550 free dynos hours per month (Heroku, 2017). To prevent redundant consumption of hours, the free plan provides Dyno sleeping, where the application goes into a sleeping state after thirty minutes without receiving any HTTP requests.This plan proves beneficial to the proposed project as it allows for cheap deployment, and is also suitable for scale of the application being developed.
 
 ### Add-ons
-Heroku also provides an add-on service, whereby fully maintained infrastructures for thirdparty applications are provided for developers. These third party add-ons build upon the existent Heroku platform to provide a range of services for applications (Heroku, 2017). This enables developers to utilise existing database storage capabilities best suited for their applications without the need of general maintainance. Some examples include some Redis and SQL storage such as Compose MongoDB, Heroku Redis, JawsDB MySql and Heroku Postgres. 
+Heroku also provides an add-on service, whereby fully maintained infrastructures for thirdparty applications are provided for developers. These third party add-ons build upon the existent Heroku platform to provide a range of services for applications (Heroku, 2017). This enables developers to utilise existing database storage capabilities best suited for their applications without the need of general maintainance. Some examples include Redis and SQL storage such as Compose MongoDB, Heroku Redis, JawsDB MySql and Heroku Postgres. 
+
+### Heroku toolbelt
+The Heroku toolbelt a package that consists of a of the Heroku CLI, Git and Foreman. These tools are useed by the Heroku environment in order to deploy applications to the cloud. The Foreman package in a command line utility used for running applications that use Procfiles (Heroku, 2017) and allows developers to test applications locally on their machine. The toolbelt also include the neccessary Heroku commands for remote version control deployment. Unlike regular git commands that deploy code to a remote repository on GitHub, the toolbelt possesses it's very own command's to push code to a Heroku repository. See command below:
+
+```
+    git add .
+    git commit -m "message"
+    git push heroku master
+```
