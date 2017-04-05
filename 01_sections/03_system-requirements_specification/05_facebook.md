@@ -11,15 +11,15 @@ The Facebook Graph API is an application program interface that allows for a app
 
 ```
     curl -X POST -H "Content-Type: application/json" -d '{
-    "recipient": {
-        "id": "USER_ID"
-    },
-    "message": {
-        "text": "hello, world!"
-    }
+        "recipient": {
+            "id": "USER_ID"
+        },
+        "message": {
+            "text": "hello, world!"
+        }
     }' "https://graph.facebook.com/v2.6/me/messages?access_token=PAGE_ACCESS_TOKEN"
 ```
 
-The JSON snippet as shown above demonstrates a post to the graph API sending parameters of the user who should receive the message, and the message that will be sent to the user. Facebook handles this JSON response accordingly to update the user interface the user is viewing.
+The JSON snippet as shown above demonstrates a post to the graph API sending parameters of the user who should receive the message, and the message that will be sent to the user. Facebook handles this JSON response accordingly to update the UI the user is viewing, be it a phone application or through computer.
 
 
