@@ -1,3 +1,5 @@
+##Platform 
+
 ### Facebook Messenger
 
 One of the worlds leading social media sites, Facebook, has opened up its platform for developers to build upon its existing infrastructure. Facebook's Newsroom website states that there is "1.23 billion daily active users on average for December 2016". The use of this platform gives a great advantage to developers as it provides an preexisting congregation of users. Developing applications for multiple platform types such as Iphone, Anroid or Blackberry becomes redundant as the Facebook Messenger application already has a large community. A few tools have been release by Facebook to allow developers utilise it's resources and harvest profiles information to provide better user experience, especially in the case of developing chat bots.
