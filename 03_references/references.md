@@ -16,3 +16,5 @@ Add-ons | Heroku Dev Center. 2017. Add-ons | Heroku Dev Center. [ONLINE] Availab
 Heroku Local | Heroku Dev Center. 2017. Heroku Local | Heroku Dev Center. [ONLINE] Available at: https://devcenter.heroku.com/articles/heroku-local. [Accessed 03 April 2017].
 
 CAREY WODEHOUSE . 2017. Should You Use MongoDB? A Look at the Leading NoSQL Database. [ONLINE] Available at: https://www.upwork.com/hiring/data/should-you-use-mongodb-a-look-at-the-leading-nosql-database/. [Accessed 5 April 2017].
+
+MongoDB. 2017. Sharding. [ONLINE] Available at: https://docs.mongodb.com/manual/sharding/. [Accessed 4 May 2017].
