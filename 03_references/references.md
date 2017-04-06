@@ -10,7 +10,6 @@ Interoute (2017) what is PaaS. Available at http://www.interoute.com/what-paas [
 Simplifying Deployment on the Cloud with Heroku." Open Source FOR You, 1 Apr. 2013. General OneFile, go.galegroup.com/ps/i.do?p=ITOF&sw=w&u=itb&v=2.1&id=GALE%7CA324391196&it=r&asid=bb653b9ab5879adbe29b6992c1f9d7dd. [Accessed 3 Apr. 2017].
 
 Dyno Types | Heroku Dev Center. 2017. Dyno Types | Heroku Dev Center. [ONLINE] Available at: https://devcenter.heroku.com/articles/dyno-types. [Accessed 03 April 2017].
-
 Add-ons | Heroku Dev Center. 2017. Add-ons | Heroku Dev Center. [ONLINE] Available at: https://devcenter.heroku.com/articles/add-ons. [Accessed 03 April 2017].
 
 Heroku Local | Heroku Dev Center. 2017. Heroku Local | Heroku Dev Center. [ONLINE] Available at: https://devcenter.heroku.com/articles/heroku-local. [Accessed 03 April 2017].
@@ -18,3 +17,7 @@ Heroku Local | Heroku Dev Center. 2017. Heroku Local | Heroku Dev Center. [ONLIN
 CAREY WODEHOUSE . 2017. Should You Use MongoDB? A Look at the Leading NoSQL Database. [ONLINE] Available at: https://www.upwork.com/hiring/data/should-you-use-mongodb-a-look-at-the-leading-nosql-database/. [Accessed 5 April 2017].
 
 MongoDB. 2017. Sharding. [ONLINE] Available at: https://docs.mongodb.com/manual/sharding/. [Accessed 4 May 2017].
+
+Wong, Julia. "What Is A Chat Bot, And Should I Be Using One?". the Guardian. N.p., 2017. Web. 6 Apr. 2017.
+
+Constine, Josh. "Facebook Launches Messenger Platform With Chatbots". TechCrunch. N.p., 2017. Web. 6 Apr. 2017.
