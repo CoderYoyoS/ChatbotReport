@@ -18,3 +18,5 @@ Heroku Local | Heroku Dev Center. 2017. Heroku Local | Heroku Dev Center. [ONLIN
 CAREY WODEHOUSE . 2017. Should You Use MongoDB? A Look at the Leading NoSQL Database. [ONLINE] Available at: https://www.upwork.com/hiring/data/should-you-use-mongodb-a-look-at-the-leading-nosql-database/. [Accessed 5 April 2017].
 
 MongoDB. 2017. Sharding. [ONLINE] Available at: https://docs.mongodb.com/manual/sharding/. [Accessed 4 May 2017].
+
+Bryan , 2016. NLP vs. NLU: What’s the Difference? Medium.com. Available at: https://medium.com/@lolatravel/nlp-vs-nlu-whats-the-difference-d91c06780992 [Accessed April 5, 2017].

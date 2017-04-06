@@ -1,3 +1,3 @@
 ### API.ai
 
-
+API.ai is Google's natural language processing (NLP) platform. API.ai provides an interface for highly sophisticated converstions with a chat bot. This is done through the means of natural language understanding (NLU) that involves taking an unstructured input from a human, and reorganise it into a structured form that is understable to a machine, and in turn, the machine triggers an event based on that input (Bryan, 2016). When an input is received, API.ai converts the input to what is called "actionable data" and returns a JSON object output. API.ai also consits of a dialog management system that uses computational linguistics to study the context and intent of the input, and allows the developer to regulate how the conversational flow should be directed.  
