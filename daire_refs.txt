@@ -1,0 +1,31 @@
+Dale, R.  (2016) The Return Of The Chatbots. *Natural Language Engineering* 22.05, 811-817.
+========================================================================
+Best, J. (2017) *IBM Watson: The Inside Story Of How The Jeopardy-Winning Supercomputer Was Born, And What It Wants To Do Next*. Retrieved from http://www.techrepublic.com on 6 Mar. 2017.
+========================================================================
+Evans, B. (2017) *Chat Bots, Conversation And AI As An Interface*. Retrieved from http://www.ben-evans.com on 03 Apr. 2017.
+========================================================================
+Deo, V. (2016) *Bots Vs Apps, Which Side Are You On*.  Retrieved from http://www.chatbotsmagazine.com on 05 Apr. 2017.
+========================================================================
+Ranger, S. (2016) *Chat Bots: How Talking To Your Apps Became The Next Big Thing*. Retrieved from http://www.zdnet.com on 05 Apr. 2017.
+========================================================================
+Cresci, E. (2017) *Chatbot That Overturned 160,000 Parking Fines Now Helping Refugees Claim Asylum*.Retrieved from http://www.theguardian.com. on 12 Apr. 2017.
+========================================================================
+
+--------------------------------------------------------------------------------------------------
+********************** TEMPLATES********************** ********************** 
+--------------------------------------------------------------------------------------------------
+JOURNAL:
+Wheeler R. (2006) Gillick or Fraser? A plea for consistency over competence in children. British Medical Journal 332, 807.
+========================================================================
+WEB:
+NICE (2006) Methods for Development of NICE Public Health Guidance. National Institute for Health and Clinical Excellence, London. Retrieved from http://www.nice.org.uk on 5 July 2007.========================================================================
+
+
+
+
+
+
+
+
+
+Common software engineering practices will also have to be explored. Because of the applications distributed nature, several considerations will have to be made about version controlling development, ensuring a high level of app availability and decoupling feature sets to nullify single-points of failure.
