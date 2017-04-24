@@ -1,5 +1,20 @@
 # System Requirements and Specification
 
+## Motivation
+A number of surveys have been carried out to outline the direction of the project. Respectively, three surveys were created on three topics (Transport, Educational Facilties and Fitness). The results received were used to gain incite of the functionalities and features the application should possess, and what was redundant to implement.
+ There was a total of 99 participants who have taken part in the transportation survey. In regards to this, it was stated that 49.5% of respondents chose Dublin Bus as their primary means of transport to college, this was followed by driving to college, coming to a sum of 40.4%. This aided in the motivation to implement a transport data service into the application for users to easily obtain information.
+
+![Transportation: Question 1. \label{sample}](04_assets/03_system_requirements_specification/question_1.PNG)   
+
+Secondly, the partakers where asked to specify their typical area for travelling home from college, and to state any alternative areas should they not be on the survey. A majority of the participants responded with 60.76% favour for Blanchardstown Shopping Centre, and succeeded by Corduff, with a high rate of 39.24%. A further understanding of features and attributes to incorperate was provided with these features, therefore it was conceived higher emphasis should be placed on transportational information for the Blanchardstown Shopping Centre.
+
+![Transportation: Question 2. \label{sample}](04_assets/03_system_requirements_specification/question_4.PNG)   
+
+Furthermore, it was asked to the average commuter of the shuttle bus provided by ITB whether they felt that the journey times for were difficult to locate on the college website. The results found that 13.27% found it difficult. A proportionally high fraction of commuters at 48.9% found it to be considerably difficult and a 37.76% of applicants found it to not be difficult.
+
+![Transportation: Question 3. \label{sample}](04_assets/03_system_requirements_specification/question_2.PNG)   
+ 
+
 ## Functional Requirements
 
 The proposed chat bot application's main desirable functionality is to provide students with a number of informational conversations about the college in real time. This involves the implementation of an easy-to-use system that shall engage with the user and provide an intuitive flow of conversation. The chat bot shall also be given with the ability to participate in basic conversational pieces to provide a more "human-like" interaction for the user.
