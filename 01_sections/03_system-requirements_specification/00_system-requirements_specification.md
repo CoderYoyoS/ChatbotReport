@@ -1,7 +1,7 @@
-# System Requirements and Specification
+# Motivation
+A number of surveys have been carried out using the online survey development software, SurveyMoneky, to outline the direction of the project. Respectively, three surveys were created on three topics: Transport, Educational Facilties and Fitness (See Appendix A). The results received were used to gain incite of the functionalities and features the application should possess, and what was redundant to implement. 
 
-## Motivation
-A number of surveys have been carried out to outline the direction of the project. Respectively, three surveys were created on three topics (Transport, Educational Facilties and Fitness). The results received were used to gain incite of the functionalities and features the application should possess, and what was redundant to implement.
+## Transportation Survey
  There was a total of 99 participants who have taken part in the transportation survey. In regards to this, it was stated that 49.5% of respondents chose Dublin Bus as their primary means of transport to college, this was followed by driving to college, coming to a sum of 40.4%. This aided in the motivation to implement a transport data service into the application for users to easily obtain information.
 
 ![Transportation: Question 1. \label{sample}](04_assets/03_system_requirements_specification/question_1.PNG)   
@@ -10,10 +10,25 @@ Secondly, the partakers where asked to specify their typical area for travelling
 
 ![Transportation: Question 2. \label{sample}](04_assets/03_system_requirements_specification/question_4.PNG)   
 
-Furthermore, it was asked to the average commuter of the shuttle bus provided by ITB whether they felt that the journey times for were difficult to locate on the college website. The results found that 13.27% found it difficult. A proportionally high fraction of commuters at 48.9% found it to be considerably difficult and a 37.76% of applicants found it to not be difficult.
+Furthermore, it was asked to the average commuter of the shuttle bus provided by ITB whether they felt that the journey times for were difficult to locate on the college website. The results found that 13.27% found it difficult. A proportionally high fraction of commuters at 48.9% found it to be considerably difficult and a 37.76% of applicants found it to not be difficult. Although there is a high portion of participants that do not consider the shuttle bus times complicated to obtain, there is however a sum of 62.25% that may believe there is improvements that could be made. The evaluations of these results lead to considerations on providing journey times for the ITB shuttle bus.
 
 ![Transportation: Question 3. \label{sample}](04_assets/03_system_requirements_specification/question_2.PNG)   
- 
+
+## Educational Facilties Survey
+
+For educational facilities, such as the library, four staff members were asked to undergo a survey based on their experience of working in library. Initially, they were asked to highlight the most frequently asked question that they recieve from students when working at the student information desk. Laptop loans were the highest selected query, resulting in 50% of the overall given choice. Followed by a tying percentage of 25% between printing information and locating books within the library.
+
+![Educational Facilities: Question 1. \label{sample}](04_assets/03_system_requirements_specification/Daire_q1.PNG)   
+
+Moreover, the staff members where asked to indicate the most recurrent queries in regards to account passwords. Forgotten pin was a the most prominent queries asked according to the participants. Secondly was queries regarding information on how to use their online accounts.
+
+![Educational Facilities: Question 2. \label{sample}](04_assets/03_system_requirements_specification/Daire_q2.PNG)   
+
+<!--Book information queries received a dominant result of 100% for locating a book. -->
+
+
+
+# System Requirements and Specification
 
 ## Functional Requirements
 
