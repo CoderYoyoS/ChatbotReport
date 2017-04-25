@@ -1,7 +1,10 @@
-# Motivation
+# System Requirements and Specification
+
+## Preliminary Requirements Specification
+
 A number of surveys have been carried out using the online survey development software, SurveyMoneky, to outline the direction of the project. Respectively, three surveys were created on three topics: Transport, Educational Facilties and Fitness (See Appendix A). The results received were used to gain incite of the functionalities and features the application should possess, and what was redundant to implement. 
 
-## Transportation Survey
+### Transportation Survey
  There was a total of 99 participants who have taken part in the transportation survey. In regards to this, it was stated that 49.5% of respondents chose Dublin Bus as their primary means of transport to college, this was followed by driving to college, coming to a sum of 40.4%. This aided in the motivation to implement a transport data service into the application for users to easily obtain information.
 
 ![Transportation: Question 1. \label{sample}](04_assets/03_system_requirements_specification/question_1.PNG)   
@@ -14,7 +17,7 @@ Furthermore, it was asked to the average commuter of the shuttle bus provided by
 
 ![Transportation: Question 3. \label{sample}](04_assets/03_system_requirements_specification/question_2.PNG)   
 
-## Educational Facilties Survey
+### Educational Facilties Survey
 
 For educational facilities, such as the library, four staff members were asked to undergo a survey based on their experience of working in library. Initially, they were asked to highlight the most frequently asked question that they recieve from students when working at the student information desk. Laptop loans were the highest selected query, resulting in 50% of the overall given choice. Followed by a tying percentage of 25% between printing information and locating books within the library.
 
@@ -26,9 +29,6 @@ Moreover, the staff members where asked to indicate the most recurrent queries i
 
 <!--Book information queries received a dominant result of 100% for locating a book. -->
 
-
-
-# System Requirements and Specification
 
 ## Functional Requirements
 
