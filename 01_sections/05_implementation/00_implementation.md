@@ -8,7 +8,7 @@ The structure of the main application entails a configuration file to set the gr
 
 ```
     module.exports = {
-        FB_PAGE_TOKEN: 'EAAZA70jtCZAh4BAKdB2uUEaubMaIZC7JzhhmkcAuAxsmIefecSNvIjeUdExJnYrAqNOtlkbnusnhgRXKUklmqYBbaj1JLdE1sPu0knPcvzZCaqyzwfBWv6lvrL0IHtYcB3LeWmq8phu4ZAtt5xqd5BjyGt673NxAnE18Y0acShbE3D3TZA6sZCl',
+        FB_PAGE_TOKEN: 'EAAZA70jtCZAh4BAKdB2uUEaubMa ...',
         FB_VERIFY_TOKEN: 'secret',
         FB_APP_SECRET: '8e3c62def3af61939a9c4ba4628517f3',
         API_AI_CLIENT_ACCESS_TOKEN: '5c09189e70614b58a8ad579c364bbf3b',
@@ -16,9 +16,31 @@ The structure of the main application entails a configuration file to set the gr
     };
 ```
 
-Ensuing the preliminary basis to the application follows the Node.JS modules that have been utilised within the project. These depencies injections aids in the implmentation of the functionalities and provide additional services to the application. Initially, the ```apiai``` module is installed to allow the application to communicate with the API.ai natural language processing service. The ```body-parser``` module is used as middleware to parse then resposne bodies. ```Crypto``` is used to verify the secret located in the header that has been sent from the Facebook. The ```express``` module is a framework for Node.js that provides Javascript to be executing without the aid of a web browser.
+Ensuing the preliminary basis to the application follows the Node.JS modules that have been utilised within the project. These depencies injections aids in the implmentation of the functionalities and provide additional services to the application. Initially, the ```apiai``` module is installed to allow the application to communicate with the API.ai natural language processing service. The ```body-parser``` module is used as middleware to parse then resposne bodies. ```Crypto``` is used to verify the secret located in the header that has been sent from the Facebook. The ```express``` module is a framework for Node.js that provides Javascript to be executing without the aid of a web browser. In order to make HTTP calls, the ```request``` module is used and lastly, the ```uuid``` module is utilised to generate a session ID.
 
+The main server Javascript file named ```index.js``` is the backbone of the chat bot application. This file contains all the logic for sending and receiving messages, as well as dealing with responses and and JSON templates used in order to drive conversations.
+Initially, the basic configurations for the server are set, this involves providing a port for the application to run on. This is allocated dynamically by Heroku.  A connection to the API.ai engine is then established.
 
+```
+    //Set the port of the app
+    app.set('port', (process.env.PORT || 5000))
 
+    const apiAiService = apiai(config.API_AI_CLIENT_ACCESS_TOKEN, {
+        language: "en", requestSource: "fb" 
+    });
+```
 
-main server Javascript file named ```index.js```. This file contains all the logical  
+A webhook route is set to receive notifications from the Facebook Messenger platform. This connection was achieved by inserting the webhook URL to the developer settings on Facebook. The following function authenticates the application and verifies access.
+
+```
+    app.get('/webhook/', function (req, res) {
+        if (req.query['hub.mode'] === 'subscribe' &&   
+            req.query['hub.verify_token'] === config.FB_VERIFY_TOKEN) {
+            res.status(200).send(req.query['hub.challenge']);
+        } else {
+            console.error("Verification was not valid.");
+            res.sendStatus(403);
+        }
+    })
+
+```
