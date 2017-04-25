@@ -30,7 +30,7 @@ Initially, the basic configurations for the server are set, this involves provid
     });
 ```
 
-A webhook route is set to receive notifications from the Facebook Messenger platform. This connection was achieved by inserting the webhook URL to the developer settings on Facebook. The following function authenticates the application and verifies access.
+A webhook route is set to receive notifications from the Facebook Messenger platform. This connection was achieved by inserting the webhook URL to the developer settings on Facebook. The following function authenticates the application and verifies access. In addition to authentication, condition handling was implemented in order to appropriately deal with messages being sent by the user. This higher level message events delineate the type of messages being sent. For example, the message could be a regular message, delivery confirmation, read receipt or postback etc.
 
 ```
     app.get('/webhook/', function (req, res) {
@@ -41,6 +41,125 @@ A webhook route is set to receive notifications from the Facebook Messenger plat
             console.error("Verification was not valid.");
             res.sendStatus(403);
         }
-    })
+    });
 
+```
+
+```
+data.entry.forEach(function (entry) {
+
+			// Iterate over each messaging event and handle accordingly
+			entry.messaging.forEach(function (messagingEvent) {
+				if(messagingEvent.message) {
+					receivedMessage(messagingEvent);
+				} 
+				else if (messagingEvent.delivery) {
+					receivedDeliveryConfirmation(messagingEvent);
+				} 
+				else if (messagingEvent.postback) {
+					receivedPostback(messagingEvent);
+				} 
+				else {
+					console.log("Unknown event type ..")
+				}
+			});
+		});
+```
+
+To provide a easy means of understanding the the functions in the source code, a three type naming convention was used. This approach was used to aid in  comprehending how the code worked and what it dealt with. These three types of functions where used to handle communication between three endpoints. Functions beginning with the word "receive" are used to carry out operations when a request has been sent to the server webhook URL. The functions that use the beginning word "handle" are functions used to manage payloads such as templates. Lastly, functions using the name "send" are used to administer data to other end points via the chat bot application.
+
+### Receive functions
+
+The primary function used in a regular use case is the ```receivedMessage``` function.  This takes in the message event as a parameter and then uses the data to initalise variable values to be used in the code. The most mos prominently used of these variables is the ```senderID``` with is needed to reply to the user who has interacted with the chat bot. This ID is unique for each Facebook user and is generously passed in the code
+
+```
+function receivedMessage(event) {
+
+	//Set variables from json
+	var senderID = event.sender.id;
+	var recipientID = event.recipient.id;
+	var timeOfMessage = event.timestamp;
+	var message = event.message;
+
+	if (!sessionIds.has(senderID)) {
+		sessionIds.set(senderID, uuid.v1());
+	}
+
+	//Set variables
+	var isEcho = message.is_echo;
+	var messageId = message.mid;
+	var appId = message.app_id;
+	var metadata = message.metadata;
+
+	// You may get a text or attachment but not both
+	var messageText = message.text;
+	var messageAttachments = message.attachments;
+	var quickReply = message.quick_reply;
+
+	//check type of messafe
+	if (isEcho) {
+		handleEcho(messageId, appId, metadata);
+		return;
+	} else if (quickReply) {
+		handleQuickReply(senderID, quickReply, messageId);
+		return;
+	}
+	//Check if it's a text message
+	if (messageText) {
+		//send message to api.ai
+		sendToApiAi(senderID, messageText);
+	} else if (messageAttachments) {
+		handleMessageAttachments(messageAttachments, senderID);
+	}
+}
+```
+The ```recievedPostback``` block is a significantly important function used to handle postback sent back from the user when a button or a quick reply is clicked. The postback is defined within the message event and is dealt with accordingly using a switch statement. When the condition is met, the suitable method is then called depending on what postback has been received.
+
+
+```
+    function receivedPostback(event) {
+
+	//Set variables
+	var senderID = event.sender.id;
+	var recipientID = event.recipient.id;
+	var timeOfPostback = event.timestamp;
+
+	// The 'payload' param is a developer-defined field which is set in a postback 
+	// button for Structured Messages. 
+	var payload = event.postback.payload;
+
+	switch (payload) {
+
+		//messages sent if get started button is clicked
+		case 'GET_STARTED' :
+
+                var messageData = {
+                recipient: { 
+                    id: senderID
+                },
+                message: {
+                    text:"Hi, I am the ITB Chatbot🤖 Im here to help you through college and make your college life easier😃\nSo lets get started 😏",
+                    quick_replies:[
+                        {
+                            content_type :"text",
+                            title : "What can you do?",
+                            payload : "What can you do?"
+                        },
+                        {
+							content_type :"text",
+							title : "Who made you?",
+							payload : "Who made you?"
+						},
+						{
+							content_type :"text",
+							title : "Privacy policy",
+							payload : "Privacy policy"
+						}
+					]
+				}
+			};
+			callSendAPI(messageData);
+			break;
+
+            . . .
 ```
