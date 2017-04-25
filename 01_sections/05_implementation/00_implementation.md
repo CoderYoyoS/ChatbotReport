@@ -66,7 +66,7 @@ data.entry.forEach(function (entry) {
 		});
 ```
 
-To provide a easy means of understanding the the functions in the source code, a three type naming convention was used. This approach was used to aid in  comprehending how the code worked and what it dealt with. These three types of functions where used to handle communication between three endpoints. Functions beginning with the word "receive" are used to carry out operations when a request has been sent to the server webhook URL. The functions that use the beginning word "handle" are functions used to manage payloads such as templates. Lastly, functions using the name "send" are used to administer data to other end points via the chat bot application.
+To provide a easy means of understanding the the functions in the source code, a three type naming convention was used. This approach was used to aid in  comprehending how the code worked and what it dealt with. These three types of functions where used to handle communication between three endpoints. Functions beginning with the word "receive" are used to carry out operations when a request has been sent to the server webhook URL. The functions that use the beginning word "handle" are functions used to manage payloads such as templates. Lastly, functions using the name "send" are used to administer data to other end points via the chat bot application. The following sections describes how these functions were implemented in addition with the most importantly used functions as examples.
 
 ### Receive functions
 
@@ -113,8 +113,7 @@ function receivedMessage(event) {
 	}
 }
 ```
-The ```recievedPostback``` block is a significantly important function used to handle postback sent back from the user when a button or a quick reply is clicked. The postback is defined within the message event and is dealt with accordingly using a switch statement. When the condition is met, the suitable method is then called depending on what postback has been received.
-
+The ```recievedPostback``` block is a significantly important function used to handle postback sent back from the user when a button or a quick reply is clicked. The postback is defined within the message event and is dealt with accordingly using a switch statement. When the condition is met, the suitable method is then called depending on what postback has been received. The following example illustrates how the chat bot would deal with a postback when a user initiates a conversation for the first time by clicking the ```Get Started``` button.
 
 ```
     function receivedPostback(event) {
@@ -138,7 +137,7 @@ The ```recievedPostback``` block is a significantly important function used to h
                     id: senderID
                 },
                 message: {
-                    text:"Hi, I am the ITB Chatbot🤖 Im here to help you through college and make your college life easier😃\nSo lets get started 😏",
+                    text:"Hi, I am the ITB Chatbot",
                     quick_replies:[
                         {
                             content_type :"text",
@@ -149,11 +148,6 @@ The ```recievedPostback``` block is a significantly important function used to h
 							content_type :"text",
 							title : "Who made you?",
 							payload : "Who made you?"
-						},
-						{
-							content_type :"text",
-							title : "Privacy policy",
-							payload : "Privacy policy"
 						}
 					]
 				}
@@ -162,4 +156,86 @@ The ```recievedPostback``` block is a significantly important function used to h
 			break;
 
             . . .
+```
+
+### Handle Functions
+
+Handle functions are primarily used when dealing with responses by the API.ai bot engine. These responses are in a JSON format and require specific algorithmic logic depending on the payload received. One of the highest level of the handle functions is the ```handleMessage```, which checks the message type value passed as a parameter. This is then used to delegate which function should next be executed appropriately. These message types are defined by API.ai.  
+
+```
+function handleMessage(message, sender) {
+	switch (message.type) {
+
+		//If it is text
+		case 0: 
+			sendTextMessage(sender, message.speech);
+			break;
+		
+		//if it a quick reply
+		case 2: 
+			let replies = [];
+			for (var i = 0; i < message.replies.length; i++) {
+				let reply =  {
+					"content_type": "text",
+					"title": message.replies[i],
+					"payload": message.replies[i]
+				}
+				replies.push(reply);
+			}
+			//Send a quick Reply 
+			sendQuickReply(sender, message.title, replies);
+			break;
+
+		//Handle Custom payloads
+		case 4:
+			var messageData = {
+				recipient: {
+					id: sender
+				},
+				message: message.payload.facebook
+			};
+			callSendAPI(messageData);
+			break;
+	}
+}
+```
+
+Second to previous function is the ```handleApiAiAction``` function, this allows for conidtion checking to see if an "Action" (as mentioned in the system requirements and specifications) was sent by by API.ai. When a action is caught, the appropriate method is taken. In this case, functions to call external API's are invoked (whichn will be touched upon in a later section).
+
+```
+function handleApiAiAction(sender, action, responseText, contexts, parameters) {
+
+	switch (action) {
+
+		/*************** Dublin Bus Actions ******************/
+
+		//Corduff bus stop
+		case "corduff-route-picked" :
+					var busNum = contexts[0].parameters.bus_id;
+					getDublinBusTimes(sender,"1835", busNum);
+			break;
+		
+                     . . . 
+
+		/*************** Library Actions ********************/
+
+		case 'library-pin-not-enrolled' :
+				getLibraryInfo(sender, action);
+		
+                    . . . 
+		
+		/***************** Gym Actions **********************/
+
+		case "gym-class-times-days-picked" :
+				var dayPicked = contexts[0].parameters.gym_days;
+				getGymInfo(sender, action, dayPicked);
+			break;
+
+                 . . . 
+		/****************************************************/
+		default:
+			//unhandled action, just send back the text
+			sendTextMessage(sender, responseText);
+	}
+}
 ```
