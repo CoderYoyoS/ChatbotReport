@@ -1,10 +1,10 @@
 # Implementation
 
-The following section will illustrate the implementation of the applications utilised within the project based on the system requirements and specifications and the system design that has been aforementioned. Firstly, a detailed description of the of primary chatbot server application will be provided followed by the implementation of the individual API's. Additionally, it will be explained how the separate applications communicate with one another in accordance to functionality and purpose. Code snippets shall also be given to demonstrate the algorithmic logic and connectivity.
+The following section will illustrate the implementation of the applications utilised within the project based on the system requirements and specifications and the system design that has been aforementioned. Firstly, a detailed description of the primary chatbot server application will be provided followed by the implementation of the individual API's. Additionally, it will be explained how the separate applications communicate with one another in accordance to functionality and purpose. Code snippets shall also be given to demonstrate the algorithmic logic and connectivity.
 
 ## Chatbot Application
 
-The structure of the main application entails a configuration file to set the group work for the entire application. This file contains the configuration variables that are utilised across the main index file to gain access to the additional tools and services mentioned in the specification. Page access tokens provided by the Facebook messenger platform in along with the developer defines verify token and application are used to authenticate access to the Messenger Send API. In addition to this, a verify token for API.ai is also stored to authenticate communication between the chatbot application and bot engine. Lastly, a ```SERVER_URL``` is provided to give a short-hand to accessing the main application host address.
+The structure of the main application entails a configuration file to set the ground work for the entire application. This file contains the configuration variables that are utilised across the main index file to gain access to the additional tools and services mentioned in the specification. Page access tokens provided by the Facebook messenger platform, developer defined verify token and application secret are used to authenticate access to the Messenger Send API. In addition to this, a verify token for API.ai is also stored to authenticate communication between the chat bot application and bot engine. Lastly, a ```SERVER_URL``` is provided to give a short-hand to accessing the main application host address.
 
 ```
     module.exports = {
@@ -16,10 +16,10 @@ The structure of the main application entails a configuration file to set the gr
     };
 ```
 
-Ensuing the preliminary basis to the application follows the Node.JS modules that have been utilised within the project. These decencies injections aids in the implementation of the functionalities and provide additional services to the application. Initially, the ```apiai``` module is installed to allow the application to communicate with the API.ai natural language processing service. The ```body-parser``` module is used as middleware to parse then response bodies. ```Crypto``` is used to verify the secret located in the header that has been sent from the Facebook. The ```express``` module is a framework for Node.js that provides Javascript to be executing without the aid of a web browser. In order to make HTTP calls, the ```request``` module is used and lastly, the ```uuid``` module is utilised to generate a session ID.
+Ensuing the preliminary basis to the application follows the Node.JS modules that have been utilised within the project. These dependency injections aid in the implementation of the functionalities and provide additional services to the application. Initially, the ```apiai``` module is installed to allow the application to communicate with the API.ai natural language processing service. The ```body-parser``` module is used as middleware to parse then response bodies. ```Crypto``` is used to verify the secret located in the request header that has been sent from the Facebook. The ```express``` module is a framework for Node.js that provides Javascript to be executed without the aid of a web browser. In order to make HTTP calls, the ```request``` module is used and lastly, the ```uuid``` module is utilised to generate a session ID.
 
-The main server Javascript file named ```index.js``` is the backbone of the chat bot application. This file contains all the logic for sending and receiving messages, as well as dealing with responses and and JSON templates used in order to drive conversations.
-Initially, the basic configurations for the server are set, this involves providing a port for the application to run on. This is allocated dynamically by Heroku.  A connection to the API.ai engine is then established.
+The main server Javascript file named ```index.js``` is the backbone of the chat bot application. This file contains all the logic for sending and receiving messages, as well as dealing with responses and and JSON templates used to drive conversations.
+Initially, the basic configurations for the server are set, this involves providing a port for the application to run on. This is allocated dynamically by Heroku. Also, a connection to the API.ai engine was then established.
 
 ```
     //Set the port of the app
@@ -30,7 +30,7 @@ Initially, the basic configurations for the server are set, this involves provid
     });
 ```
 
-A webhook route is set to receive notifications from the Facebook Messenger platform. This connection was achieved by inserting the webhook URL to the developer settings on Facebook. The following function authenticates the application and verifies access. In addition to authentication, condition handling was implemented in order to appropriately deal with messages being sent by the user. This higher level message events delineate the type of messages being sent. For example, the message could be a regular message, delivery confirmation, read receipt or postback etc.
+A webhook route is set to receive notifications from the Facebook Messenger platform. This connection was achieved by inserting the webhook URL to the developer settings on Facebook. The following function authenticates the application and verifies access. In addition to authentication, condition handling was implemented in order to appropriately deal with messages being sent by the user. This higher level message events delineate the type of messages being sent. For example, the message could be a regular text message, delivery confirmation, read receipt or postback etc.
 
 ```
     app.get('/webhook/', function (req, res) {
@@ -66,11 +66,11 @@ data.entry.forEach(function (entry) {
 		});
 ```
 
-To provide a easy means of understanding the the functions in the source code, a three type naming convention was used. This approach was used to aid in  comprehending how the code worked and what it dealt with. These three types of functions where used to handle communication between three endpoints. Functions beginning with the word "receive" are used to carry out operations when a request has been sent to the server webhook URL. The functions that use the beginning word "handle" are functions used to manage payloads such as templates. Lastly, functions using the name "send" are used to administer data to other end points via the chat bot application. The following sections describes how these functions were implemented in addition with the most importantly used functions as examples.
+To provide a easy means of understanding the the functions in the source code, a three type naming convention was used. This approach was used to aid in comprehending how the code worked and what it dealt with. These three types of functions where used to handle communication between three end points. Functions beginning with the word "receive" are used to carry out operations when a request has been sent to the server webhook URL from Facebook. The functions that use the beginning word "handle" are functions used to manage payloads such as templates. Lastly, functions using the name "send" are used to administer data to other end points via the chat bot application. The following sections describes how these functions were implemented in addition with the most importantly used functions as examples.
 
 ### Receive functions
 
-The primary function used in a regular use case is the ```receivedMessage``` function.  This takes in the message event as a parameter and then uses the data to initalise variable values to be used in the code. The most mos prominently used of these variables is the ```senderID``` with is needed to reply to the user who has interacted with the chat bot. This ID is unique for each Facebook user and is generously passed in the code
+The primary function used in a regular use case is the ```receivedMessage``` function.  This takes in the message event as a parameter and then uses the data to initalise variable values to be used in the code. The most prominently used of these variables is the ```senderID``` with is needed to reply to the user who has interacted with the chat bot. This ID is unique for each Facebook user and is generously passed to other functions within the code.
 
 ```
 function receivedMessage(event) {
@@ -113,7 +113,7 @@ function receivedMessage(event) {
 	}
 }
 ```
-The ```recievedPostback``` block is a significantly important function used to handle postback sent back from the user when a button or a quick reply is clicked. The postback is defined within the message event and is dealt with accordingly using a switch statement. When the condition is met, the suitable method is then called depending on what postback has been received. The following example illustrates how the chat bot would deal with a postback when a user initiates a conversation for the first time by clicking the ```Get Started``` button.
+The ```recievedPostback``` block is a significantly important function used to handle postbacks sent back from the user when a button or a quick reply is clicked. The postback is defined within the message event and is dealt with accordingly using a switch statement. When the condition is met, the suitable method is then called depending on what postback has been received. The following example illustrates how the chat bot would deal with a postback when a user initiates a conversation for the first time by clicking the ```Get Started``` button.
 
 ```
     function receivedPostback(event) {
@@ -200,7 +200,7 @@ function handleMessage(message, sender) {
 }
 ```
 
-Second to previous function is the ```handleApiAiAction``` function, this allows for conidtion checking to see if an "Action" (as mentioned in the system requirements and specifications) was sent by by API.ai. When a action is caught, the appropriate method is taken. In this case, functions to call external API's are invoked (whichn will be touched upon in a later section).
+Second to previous function is the ```handleApiAiAction``` function. Only if an action is defined then this function will be called. When a action is caught in the switch statement, the appropriate method is taken. In this case, functions to call external API's are invoked (which in will be touched upon in a later section).
 
 ```
 function handleApiAiAction(sender, action, responseText, contexts, parameters) {
@@ -231,11 +231,100 @@ function handleApiAiAction(sender, action, responseText, contexts, parameters) {
 				getGymInfo(sender, action, dayPicked);
 			break;
 
-                 . . . 
+                  . . . 
 		/****************************************************/
 		default:
 			//unhandled action, just send back the text
 			sendTextMessage(sender, responseText);
 	}
+}
+```
+
+### Send Functions
+
+Send functions are used to send certain type of data to a particular end point and called when a certain content type is sent back from API.ai. These contain JSON templates to dispatch different response types ranging from images, button messages, quick replies, quick replies to other additional features likes sending read receipts or typing bubbles which was used to simulate human like characteristic to the chat. The most dominantly used of these functions is the ```sendTextMessage``` function, which provides JSON to reply with just a string of text. The function takes in the users unique ID and the text that was given back from API.ai and adds it to a JSON object accordingly. The ```callSendAPI``` function is then invoked, passing the the JSON object.
+
+```
+function sendTextMessage(recipientId, text) {
+	var messageData = {
+		recipient: {
+			id: recipientId
+		},
+		message: {
+			text: text
+		}
+	}
+	callSendAPI(messageData);
+}
+```
+
+Another example of a send function would be ```sendToApiAi```. Initially the sender ID and the message is passed. The ```sendTypingOn``` function is invoked to display a typing bubble on the interacting user's Messenger interface. A request is then sent to API.ai containing the text and the session ID assigned to that user. It then waits for a response from API.ai and sends the received data to the ```handleApiAiResponse``` function. 
+
+```
+function sendToApiAi(sender, text) {
+
+	//sends the typing bubble to the sender until 
+	//a response is given
+	sendTypingOn(sender);
+	
+	//Send message to API.ai
+	let apiaiRequest = apiAiService.textRequest(text, {
+		sessionId: sessionIds.get(sender)
+	});
+
+	//Wait for response to API.ai
+	apiaiRequest.on('response', (response) => {
+		if (isDefined(response.result)) {
+			handleApiAiResponse(sender, response);
+		}
+	});
+
+	apiaiRequest.on('error', (error) => console.error(error));
+	apiaiRequest.end();
+}
+```
+
+### API calls
+
+For each of the API's that have been developed, a function was made which is invoked from  ```handleApiAiAction```. A request is made using the ```options``` JSON object which contains the API server URL, applicable parameters and the HTTP method. When the request is made a callback function takes the response body and applies it to the ```messageData``` object, along with additional quick reply buttons to drive conversational flow. The ```callSendApi``` is then invoked to send the message back to the user. The example below displays a function that uses the bus API  that has been developed.
+
+```
+function getDublinBusTimes(recipientId, stopId, busNum){
+
+	var options = {
+		url: "https://aaronapi.herokuapp.com/bus/" + stopId + "/" + busNum + "/", 
+		method : "GET"
+	}
+	//Make a request to the API
+	request(options, function(error, res, body){
+
+			var text = res.body;
+			var messageData = {
+				recipient: { 
+					id: recipientId
+				},
+				message: {
+					text: res.body,
+					quick_replies:[
+						{
+							content_type :"text",
+							title : "Pick another Bus?",
+							payload : "Dublin Bus"
+						},
+						{
+							content_type :"text",
+							title : "Main Menu ",
+							payload : "Main menu"
+						},
+						{
+							content_type :"text",
+							title : "No thanks",
+							payload : "No thanks"
+						}
+					]
+				}
+			}
+			callSendAPI(messageData);
+	});
 }
 ```
