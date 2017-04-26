@@ -18,4 +18,3 @@ API Testing scenarios and expected results
 -------------------------------------------------------------
 
 ##Usability Testing
-
