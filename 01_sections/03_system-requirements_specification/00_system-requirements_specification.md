@@ -9,7 +9,7 @@ A number of surveys have been carried out using the online survey development so
 
 ![Transportation: Question 1. \label{sample}](04_assets/03_system_requirements_specification/question_1.PNG)   
 
-Secondly, the partakers where asked to specify their typical area for travelling home from college, and to state any alternative areas should they not be on the survey. A majority of the participants responded with 60.76% favour for Blanchardstown Shopping Centre, and succeeded by Corduff, with a high rate of 39.24%. A further understanding of features and attributes to incorperate was provided with these features, therefore it was conceived higher emphasis should be placed on transportational information for the Blanchardstown Shopping Centre.
+Secondly, the partakers where asked to specify their typical area for travelling home from college, and to state any alternative areas should they not be on the survey. A majority of the participants responded with 60.76% favour for Blanchardstown Shopping Centre, and succeeded by Corduff, with a high rate of 39.24%. A further understanding of features and attributes to incorporate was provided with these features, therefore it was conceived higher emphasis should be placed on transportational information for the Blanchardstown Shopping Centre.
 
 ![Transportation: Question 2. \label{sample}](04_assets/03_system_requirements_specification/question_4.PNG)   
 
@@ -19,7 +19,7 @@ Furthermore, it was asked to the average commuter of the shuttle bus provided by
 
 ### Educational Facilties Survey
 
-For educational facilities, such as the library, four staff members were asked to undergo a survey based on their experience of working in library. Initially, they were asked to highlight the most frequently asked question that they recieve from students when working at the student information desk. Laptop loans were the highest selected query, resulting in 50% of the overall given choice. Followed by a tying percentage of 25% between printing information and locating books within the library.
+For educational facilities, such as the library, four staff members were asked to undergo a survey based on their experience of working in library. Initially, they were asked to highlight the most frequently asked question that they receive from students when working at the student information desk. Laptop loans were the highest selected query, resulting in 50% of the overall given choice. Followed by a tying percentage of 25% between printing information and locating books within the library.
 
 ![Educational Facilities: Question 1. \label{sample}](04_assets/03_system_requirements_specification/Daire_q1.PNG)   
 
