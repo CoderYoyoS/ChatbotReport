@@ -1,8 +1,10 @@
 # System Requirements and Specification
 
+
+
 ## Preliminary Requirements Specification
 
-A number of surveys have been carried out using the online survey development software, SurveyMoneky, to outline the direction of the project. Respectively, three surveys were created on three topics: Transport, Educational Facilties and Fitness (See Appendix A). The results received were used to gain incite of the functionalities and features the application should possess, and what was redundant to implement. 
+A number of surveys have been carried out using the online survey development software, SurveyMonkey, to outline the direction of the project. Respectively, three surveys were created on three topics: Transport, Educational Facilities and Fitness (See Appendix A). The results received were used to gain incite of the functionalities and features the application should possess, and what was redundant to implement. 
 
 ### Transportation Survey
  There was a total of 99 participants who have taken part in the transportation survey. In regards to this, it was stated that 49.5% of respondents chose Dublin Bus as their primary means of transport to college, this was followed by driving to college, coming to a sum of 40.4%. This aided in the motivation to implement a transport data service into the application for users to easily obtain information.
@@ -17,7 +19,7 @@ Furthermore, it was asked to the average commuter of the shuttle bus provided by
 
 ![Transportation: Question 3. \label{sample}](04_assets/03_system_requirements_specification/question_2.PNG)   
 
-### Educational Facilties Survey
+### Educational Facilities Survey
 
 For educational facilities, such as the library, four staff members were asked to undergo a survey based on their experience of working in library. Initially, they were asked to highlight the most frequently asked question that they receive from students when working at the student information desk. Laptop loans were the highest selected query, resulting in 50% of the overall given choice. Followed by a tying percentage of 25% between printing information and locating books within the library.
 
@@ -28,6 +30,18 @@ Moreover, the staff members where asked to indicate the most recurrent queries i
 ![Educational Facilities: Question 2. \label{sample}](04_assets/03_system_requirements_specification/Daire_q2.PNG)   
 
 <!--Book information queries received a dominant result of 100% for locating a book. -->
+
+### Fitness Facilities Survey
+
+The fitness facilities survey also provided an accurate gauge of the commonly asked questions that the staff members in the ITB gym facilities are consistently queried with. The survey was conducted and five staff members participated. Firstly, staff members were asked to highlight the most frequent questions they are consistently asked. These questions were narrowed down to broad categories. See fig{whatever} to demonstrate how this was done.
+
+![Fitness Facilities: Question 1. \label{Fitness Facilities}](04_assets/03_system_requirements_specification/Brian_q1.PNG)    
+
+Furthermore, the staff members were asked to complete a question isolated to a specific area mentioned in the previous question. For example, they were asked to identify commonly asked questions surrounding the area of opening times. See fig{whatever} to demonstrate how the question was delivered.
+
+![Fitness Facilities: Question 2. \label{Fitness Facilities}](04_assets/03_system_requirements_specification/Brian_q2.PNG)   
+
+The remainder of these survey questions were designed in a similar fashion in order to gain a better understanding of each area in isolation. These survey questions contributed to arriving at a viable and plausible feature set for the application. 
 
 
 ## Functional Requirements
