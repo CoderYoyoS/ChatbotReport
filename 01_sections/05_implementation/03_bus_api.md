@@ -137,6 +137,5 @@ Additionally, when the loop of the result set has finished executing, a counter 
         }
     }
 }); 
-});
 ```
 To conclude, the API successfully takes in values sent by the chat bot application and returns the appropriate real time information in a suitable and human like message.
