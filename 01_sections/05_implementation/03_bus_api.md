@@ -1,6 +1,6 @@
 ## Application Program Interfaces
 
-As previously touched upon in the system design, three application program interfaces were developed in order to provide additional information.  Each API was hosted on Heroku and run entirely autonomously from the main application. The following section provides a detailed explaination of the implementation of bus, gym and library APIs and shall be aided with code snippets to further exemplify their functionalities and capabilities.
+As previously touched upon in the system design, three application program interfaces were developed to provide additional information.  Each API was hosted on Heroku and run entirely autonomously from the main application. The following section provides a detailed explanation of the implementation of bus, gym and library APIs and shall be aided with code snippets to further exemplify their functionalities and capabilities.
 
 ### Bus API
 
@@ -26,7 +26,7 @@ The initial dependencies are imported to the ```server.js``` file. These include
     })
 ```
 
-Asformentioned in implementation of the chat bot application server code, the call to the bus API sends two parameters. The bus number parameter is extracted from API.ai and sent to the ```handleApiAiAction```. Also, depending on what action is caught, the bus stop ID of the corresponding bus area is also passed and added as a parameter to the URL.
+Asforementioned in implementation of the chat bot application server code, the call to the bus API sends two parameters. The bus number parameter is extracted from API.ai and sent to the ```handleApiAiAction```. Also, depending on what action is caught, the bus stop ID of the corresponding bus area is also passed and added as a parameter to the URL.
 ```
 	var options = {
 		url: "https://aaronapi.herokuapp.com/bus/" + stopId + "/" + busNum + "/", 
@@ -98,7 +98,7 @@ A JSON object named ```options``` is then initialised with the URL for the RTPI 
             }
 ```
 
-Should there be a number of results, the results set is traversed.  A guard to check if the ```route``` is the same as the one passed from the main application code or if the ```All``` variable is set to true. This is to ensure that only the bus route specified or all the bus routes are extracted. The value of the bus route and the amount of minutes until it is due is concatenated to a message string over each loop of iteration. Additional checks are put in place to verify that the message being sent back makes sense. For instance, should the ```duetime``` value be equal to one, then the message is changed from "due in X minutes" to "due in 1 minute".
+Should there be a number of results, the results set is traversed.  A guard to check if the ```route``` is the same as the one passed from the main application code or if the ```All``` variable is set to true. This is to ensure that only the bus route specified or all the bus routes are extracted. The value of the bus route and the number of minutes until it is due is concatenated to a message string over each loop of iteration. Additional checks are put in place to verify that the message being sent back makes sense. For instance, should the ```duetime``` value be equal to one, then the message is changed from "due in X minutes" to "due in 1 minute".
 Additionally, when the loop of the result set has finished executing, a counter for the results are checked. During each iteration, this value was incremented. If the value has a value of zero prior to the loop, this shows that there is no bus due at the bus stop specified. Lastly, the resulting message is then send back to the main application and dealt with accordingly.
 
 ```

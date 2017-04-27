@@ -1,4 +1,4 @@
-### Git and Github
+### Git and GitHub
 
 Git is a version control system (VCS) used for collaborative development of code. A copy of the source code and other essential assets are stored in what is known as a repository. This repository, also known as a repo, is tracked and maintained securely should the team or developer roll back on to a previous version of an application. Git is also accompanied with the an online graphical interface called GitHub that allows team members to review, analyse and track repositories. GitHub provides a number of additional services such as graph representations of commits to a repository, online documentation using the GitHub pages service, visual portrayal of code differences between separate commits and issue tracking, where users can collaborate, provide insight and help solve problems that may arise during code development.
 
