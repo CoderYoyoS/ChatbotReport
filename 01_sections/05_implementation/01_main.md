@@ -12,9 +12,9 @@ The structure of the main application entails a configuration file to set the gr
     };
 ```
 
-Ensuing the preliminary basis to the application follows the Node.JS modules that have been utilised within the project. These dependency injections aid in the implementation of the functionalities and provide additional services to the application. Initially, the ```apiai``` module is installed to allow the application to communicate with the API.ai natural language processing service. The ```body-parser``` module is used as middleware to parse then response bodies. ```Crypto``` is used to verify the secret located in the request header that has been sent from the Facebook. The ```express``` module is a framework for Node.js that provides Javascript to be executed without the aid of a web browser. In order to make HTTP calls, the ```request``` module is used and lastly, the ```uuid``` module is utilised to generate a session ID.
+Ensuing the preliminary basis to the application follows the Node.JS modules that have been utilised within the project. These dependency injections aid in the implementation of the functionalities and provide additional services to the application. Initially, the ```apiai``` module is installed to allow the application to communicate with the API.ai natural language processing service. The ```body-parser``` module is used as middleware to parse then response bodies. ```Crypto``` is used to verify the secret located in the request header that has been sent from the Facebook. The ```express``` module is a framework for Node.js that provides JavaScript to be executed without the aid of a web browser. In order to make HTTP calls, the ```request``` module is used and lastly, the ```uuid``` module is utilised to generate a session ID.
 
-The main server Javascript file named ```index.js``` is the backbone of the chat bot application. This file contains all the logic for sending and receiving messages, as well as dealing with responses and and JSON templates used to drive conversations.
+The main server JavaScript file named ```index.js``` is the backbone of the chat bot application. This file contains all the logic for sending and receiving messages, as well as dealing with responses and JSON templates used to drive conversations.
 Initially, the basic configurations for the server are set, this involves providing a port for the application to run on. This is allocated dynamically by Heroku. Also, a connection to the API.ai engine was then established.
 
 ```
@@ -26,7 +26,7 @@ Initially, the basic configurations for the server are set, this involves provid
     });
 ```
 
-A webhook route is set to receive notifications from the Facebook Messenger platform. This connection was achieved by inserting the webhook URL to the developer settings on Facebook. The following function authenticates the application and verifies access. In addition to authentication, condition handling was implemented in order to appropriately deal with messages being sent by the user. This higher level message events delineate the type of messages being sent. For example, the message could be a regular text message, delivery confirmation, read receipt or postback etc.
+A webhook route is set to receive notifications from the Facebook Messenger platform. This connection was achieved by inserting the webhook URL to the developer settings on Facebook. The following function authenticates the application and verifies access. In addition to authentication, condition handling was implemented in order to appropriately deal with messages being sent by the user. This higher-level message events delineate the type of messages being sent. For example, the message could be a regular text message, delivery confirmation, read receipt or postback etc.
 
 ```
     app.get('/webhook/', function (req, res) {
@@ -62,11 +62,11 @@ data.entry.forEach(function (entry) {
 		});
 ```
 
-To provide a easy means of understanding the the functions in the source code, a three type naming convention was used. This approach was used to aid in comprehending how the code worked and what it dealt with. These three types of functions where used to handle communication between three end points. Functions beginning with the word "receive" are used to carry out operations when a request has been sent to the server webhook URL from Facebook. The functions that use the beginning word "handle" are functions used to manage payloads such as templates. Lastly, functions using the name "send" are used to administer data to other end points via the chat bot application. The following sections describes how these functions were implemented in addition with the most importantly used functions as examples.
+To provide a easy means of understanding the functions in the source code, a three type naming convention was used. This approach was used to aid in comprehending how the code worked and what it dealt with. These three types of functions where used to handle communication between three end points. Functions beginning with the word "receive" are used to carry out operations when a request has been sent to the server webhook URL from Facebook. The functions that use the beginning word "handle" are functions used to manage payloads such as templates. Lastly, functions using the name "send" are used to administer data to other end points via the chat bot application. The following sections describes how these functions were implemented in addition with the most importantly used functions as examples.
 
 ### Receive functions
 
-The primary function used in a regular use case is the ```receivedMessage``` function.  This takes in the message event as a parameter and then uses the data to initalise variable values to be used in the code. The most prominently used of these variables is the ```senderID``` with is needed to reply to the user who has interacted with the chat bot. This ID is unique for each Facebook user and is generously passed to other functions within the code.
+The primary function used in a regular use case is the ```receivedMessage``` function.  This takes in the message event as a parameter and then uses the data to initialise variable values to be used in the code. The most prominently used of these variables is the ```senderID``` with is needed to reply to the user who has interacted with the chat bot. This ID is unique for each Facebook user and is generously passed to other functions within the code.
 
 ```
 function receivedMessage(event) {
@@ -237,7 +237,7 @@ function handleApiAiAction(sender, action, responseText, contexts, parameters) {
 
 ### Send Functions
 
-Send functions are used to send certain type of data to a particular end point and called when a certain content type is sent back from API.ai. These contain JSON templates to dispatch different response types ranging from images, button messages, quick replies, quick replies to other additional features likes sending read receipts or typing bubbles which was used to simulate human like characteristic to the chat. The most dominantly used of these functions is the ```sendTextMessage``` function, which provides JSON to reply with just a string of text. The function takes in the users unique ID and the text that was given back from API.ai and adds it to a JSON object accordingly. The ```callSendAPI``` function is then invoked, passing the the JSON object.
+Send functions are used to send certain type of data to a particular end point and called when a certain content type is sent back from API.ai. These contain JSON templates to dispatch different response types ranging from images, button messages, quick replies, quick replies to other additional features likes sending read receipts or typing bubbles which was used to simulate human like characteristic to the chat. The most dominantly used of these functions is the ```sendTextMessage``` function, which provides JSON to reply with just a string of text. The function takes in the users unique ID and the text that was given back from API.ai and adds it to a JSON object accordingly. The ```callSendAPI``` function is then invoked, passing the JSON object.
 
 ```
 function sendTextMessage(recipientId, text) {
@@ -346,4 +346,4 @@ function callSendAPI(messageData) {
 }
 ```
 
-In conclusion, the main server application consists of a range of functions to handle and distribute data between external entities. It also incorporated intuitive naming for a better understanding of the code. For further code listing, see the respository link in Appendix A.
+In conclusion, the main server application consists of a range of functions to handle and distribute data between external entities. It also incorporated intuitive naming for a better understanding of the code. For further code listing, see the repository link in Appendix A.
