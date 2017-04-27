@@ -1,4 +1,4 @@
 \frontmatter 
 \chapter{Abstract}
 
-Write this at the end
+A chatbot is a computer program that mimics conversation with a human using artificial intelligence. The purpose of this project is to investigate the appropriate technologies involved in the implementation of a chatbot. With the advent of big messaging platforms opening up their applications for developers to integrate their chatbots, it presents interesting opportunities for developers to deploy their very own chatbot applications and have them available to use on some of the worlds largest and industry-leading messaging platforms. An exploration of common software engineering practices centred around chatbot development, the deployment of chatbot applications and the appropriate development stack required to bring a chatbot to fruition will be covered in this report.
