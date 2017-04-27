@@ -3,7 +3,6 @@ This section will present the requirements that this projects application will r
 
 
 ## Preliminary Requirements Specification
-
 A number of surveys have been carried out using the online survey development software, SurveyMonkey, to outline the direction of the project. Respectively, three surveys were created on three topics: Transport, Educational Facilities and Fitness (See Appendix A). The results received were used to gain incite of the functionalities and features the application should possess, and what was redundant to implement. 
 
 ### Transportation Survey
