@@ -1,5 +1,5 @@
 # System Requirements and Specification
-
+This section will present the requirements that this projects application will require. As understood from the methodology section of this paper, decisions needed to be made by the project participants in regards to what feature set the application would have, what the preliminary functionality requirements are, what platform to deploy the application, what messaging platform to integrate with, how to version control the project and also, what natural language processing API to use.
 
 
 ## Preliminary Requirements Specification
