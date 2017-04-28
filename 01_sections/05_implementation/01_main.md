@@ -1,6 +1,6 @@
 ## Chatbot Application
 
-The structure of the main application entails a configuration file to set the ground work for the entire application. This file contains the configuration variables that are utilised across the main index file to gain access to the additional tools and services mentioned in the specification. Page access tokens provided by the Facebook messenger platform, developer defined verify token and application secret are used to authenticate access to the Messenger Send API. In addition to this, a verify token for API.ai is also stored to authenticate communication between the chat bot application and bot engine. Lastly, a ```SERVER_URL``` is provided to give a short-hand to accessing the main application host address.
+The structure of the main application entails a configuration file to set the ground work for the entire application. This file contains the configuration variables that are utilised across the main index file to gain access to the additional tools and services mentioned in the specification. Page access tokens provided by the Facebook messenger platform, developer defined verify token and application secret are used to authenticate access to the Messenger Send API. In addition to this, a verify token for API.ai is also stored to authenticate communication between the chatbot application and bot engine. Lastly, a ```SERVER_URL``` is provided to give a short-hand to accessing the main application host address.
 
 ```
     module.exports = {
@@ -14,7 +14,7 @@ The structure of the main application entails a configuration file to set the gr
 
 Ensuing the preliminary basis to the application follows the Node.JS modules that have been utilised within the project. These dependency injections aid in the implementation of the functionalities and provide additional services to the application. Initially, the ```apiai``` module is installed to allow the application to communicate with the API.ai natural language processing service. The ```body-parser``` module is used as middleware to parse then response bodies. ```Crypto``` is used to verify the secret located in the request header that has been sent from the Facebook. The ```express``` module is a framework for Node.js that provides JavaScript to be executed without the aid of a web browser. In order to make HTTP calls, the ```request``` module is used and lastly, the ```uuid``` module is utilised to generate a session ID.
 
-The main server JavaScript file named ```index.js``` is the backbone of the chat bot application. This file contains all the logic for sending and receiving messages, as well as dealing with responses and JSON templates used to drive conversations.
+The main server JavaScript file named ```index.js``` is the backbone of the chatbot application. This file contains all the logic for sending and receiving messages, as well as dealing with responses and JSON templates used to drive conversations.
 Initially, the basic configurations for the server are set, this involves providing a port for the application to run on. This is allocated dynamically by Heroku. Also, a connection to the API.ai engine was then established.
 
 ```
@@ -62,11 +62,11 @@ data.entry.forEach(function (entry) {
 		});
 ```
 
-To provide a easy means of understanding the functions in the source code, a three type naming convention was used. This approach was used to aid in comprehending how the code worked and what it dealt with. These three types of functions where used to handle communication between three end points. Functions beginning with the word "receive" are used to carry out operations when a request has been sent to the server webhook URL from Facebook. The functions that use the beginning word "handle" are functions used to manage payloads such as templates. Lastly, functions using the name "send" are used to administer data to other end points via the chat bot application. The following sections describes how these functions were implemented in addition with the most importantly used functions as examples.
+To provide a easy means of understanding the functions in the source code, a three type naming convention was used. This approach was used to aid in comprehending how the code worked and what it dealt with. These three types of functions where used to handle communication between three end points. Functions beginning with the word "receive" are used to carry out operations when a request has been sent to the server webhook URL from Facebook. The functions that use the beginning word "handle" are functions used to manage payloads such as templates. Lastly, functions using the name "send" are used to administer data to other end points via the chatbot application. The following sections describes how these functions were implemented in addition with the most importantly used functions as examples.
 
 ### Receive functions
 
-The primary function used in a regular use case is the ```receivedMessage``` function.  This takes in the message event as a parameter and then uses the data to initialise variable values to be used in the code. The most prominently used of these variables is the ```senderID``` with is needed to reply to the user who has interacted with the chat bot. This ID is unique for each Facebook user and is generously passed to other functions within the code.
+The primary function used in a regular use case is the ```receivedMessage``` function.  This takes in the message event as a parameter and then uses the data to initialise variable values to be used in the code. The most prominently used of these variables is the ```senderID``` with is needed to reply to the user who has interacted with the chatbot. This ID is unique for each Facebook user and is generously passed to other functions within the code.
 
 ```
 function receivedMessage(event) {
@@ -109,7 +109,7 @@ function receivedMessage(event) {
 	}
 }
 ```
-The ```recievedPostback``` block is a significantly important function used to handle postbacks sent back from the user when a button or a quick reply is clicked. The postback is defined within the message event and is dealt with accordingly using a switch statement. When the condition is met, the suitable method is then called depending on what postback has been received. The following example illustrates how the chat bot would deal with a postback when a user initiates a conversation for the first time by clicking the ```Get Started``` button.
+The ```recievedPostback``` block is a significantly important function used to handle postbacks sent back from the user when a button or a quick reply is clicked. The postback is defined within the message event and is dealt with accordingly using a switch statement. When the condition is met, the suitable method is then called depending on what postback has been received. The following example illustrates how the chatbot would deal with a postback when a user initiates a conversation for the first time by clicking the ```Get Started``` button.
 
 ```
     function receivedPostback(event) {

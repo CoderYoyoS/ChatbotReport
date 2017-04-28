@@ -56,7 +56,7 @@ app.get('/bus/:stop_id/:bus_num', function(req, res) {
 
         /** 
          * Assign stop id and bus number to the values
-         * passed by chat bot
+         * passed by chatbot
          */
         var stopId = data.bus.stop_id;
         var busNumber = data.bus.bus_num;
@@ -138,4 +138,4 @@ Additionally, when the loop of the result set has finished executing, a counter 
     }
 }); 
 ```
-To conclude, the API successfully takes in values sent by the chat bot application and returns the appropriate real time information in a suitable and human like message.
+To conclude, the API successfully takes in values sent by the chatbot application and returns the appropriate real time information in a suitable and human like message.

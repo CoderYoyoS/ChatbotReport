@@ -1,6 +1,7 @@
 \backmatter
 
 # References
+<!--Brian Refs-->
 
 Hirschberg, J. and Manning, C.D. (2015) ‘Advances in Natural Language Processing’, Science, 349(6245), pp. 261-266.
 
@@ -16,6 +17,7 @@ Init.ai Decoded (2017) 11 best messaging platforms for your chatbot or conversat
 
 
 Simplifying Deployment on the Cloud with Heroku." Open Source FOR You, 1 Apr. 2013. General OneFile, go.galegroup.com/ps/i.do?p=ITOF&sw=w&u=itb&v=2.1&id=GALE%7CA324391196&it=r&asid=bb653b9ab5879adbe29b6992c1f9d7dd. [Accessed 3 Apr. 2017].
+<!--Aaron Refs -->
 
 Dyno Types | Heroku Dev Center. 2017. Dyno Types | Heroku Dev Center. [ONLINE] Available at: https://devcenter.heroku.com/articles/dyno-types. [Accessed 03 April 2017].
 
