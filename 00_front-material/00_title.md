@@ -4,7 +4,7 @@
         \vspace*{1cm}
         
 
-       \large{ \textbf{ \uppercase{ChatBot Development}}}
+       \large{ \textbf{ \uppercase{Chatbot Development}}}
         
         \vspace{0.5cm}
         

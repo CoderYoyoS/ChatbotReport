@@ -1,6 +1,6 @@
 ## Training API.ai
 
-Training the API.ai agent is an important vital component of ensuring that the right intents are triggered when interacting with the chat bot. API.ai provides a testing console for developers to perform test conversations with the agent on a web interface. The console displays the sentence entered by the tester, the response that the agent returns, the intent that was triggered based on the semantics extracted from the input, a context of the conversation that has been instigated, the appropriate action set in the intent triggered (if any) and the parameters name of the value extracted from the user input (See figure 7.1) .
+Training the API.ai agent is an important vital component of ensuring that the right intents are triggered when interacting with the chatbot. API.ai provides a testing console for developers to perform test conversations with the agent on a web interface. The console displays the sentence entered by the tester, the response that the agent returns, the intent that was triggered based on the semantics extracted from the input, a context of the conversation that has been instigated, the appropriate action set in the intent triggered (if any) and the parameters name of the value extracted from the user input (See figure 7.1) .
 
 ![API.ai Testing Console. \label{API.ai Console}](04_assets/06_testing_evaluation/api_console.jpg)
 
