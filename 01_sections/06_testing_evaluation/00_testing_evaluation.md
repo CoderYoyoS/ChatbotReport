@@ -4,11 +4,11 @@ Testing and evaluation is a crucial and important part of any piece software to 
 ###API Testing
 API testing was incorporated to establish if each RESTful API implemented into the chatbots framework returned accurate responses based on each HTTP request sent. To accomplish this task a testing environment was setup. Which encompassed a setting in which tests can be carried out and a system whereby to document each test.  As aforementioned the API tests were carried out using Postman which is an API testing tool. Postman provides an environment in which to interact with API’s to construct HTTP requests and read HTTP responses. The tests constructed within Postman were designed to examine endpoints in each RESTful API with the required set of parameters using the HTTP GET function as each RESTful API only returns data. In order to successfully document all the tests carried out on each API endpoint tables were constructed to contain all test conditions and results for each API. In addition, to test in the Postman environment there are a number of parameters that must be provided, these include a URL, URI and a HTTP method. The below screen shot is an example of a test performed in Postman.
 
-![Example of test in Postman environment. \label{Test in Postman}](04_assets\06_testing_evaluation\test.PNG)
+![Example of test in Postman environment. \label{Test in Postman}](04_assets/06_testing_evaluation/test.PNG)
 
 In order to successfully document all the tests carried out on each API endpoint tables were constructed to contain all test conditions and results for each API.
 
-![Table of documented tests. \label{Test in Postman}](04_assets\06_testing_evaluation\table.PNG)
+![Table of documented tests. \label{Test in Postman}](04_assets/06_testing_evaluation/table.PNG)
 
 ###Usability Testing
 Usability testing was implemented to examine the manner in which the end user interacts with the chatbot.  Additionally, this form of testing was incorporated to determine and quantify the chatbots ease of use and the overall experience of the user while interacting with the application. As above mentioned this task was achieved by adding a select number of users as testers to the platform were the chatbot is housed. In addition, the users were observed interacting with the chatbot in an informal setting, thus making them more at ease and comfortable to suggest change. Changes were made to the chatbot in terms of conversational flow. A more button driven approach was taken due to the response of the testers. See appendix ? for screenshots of user interactions.
