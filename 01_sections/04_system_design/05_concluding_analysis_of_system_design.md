@@ -1,5 +1,4 @@
 ##Concluding Analysis of the System Design
 
-This needs to be done.
-
+The way in which the system was designed was a thorough analysis of how each participant in the system would interact with each other. Upon investigating the technologies for this application, a complete understanding of how these nodes would participate with each other and exchange instructions was a vital understanding prior to development. As an exercise in individual work amongst team members, the decision was made to implement each feature as its own RESTful service and have these services deployed to Heroku. The team chose to segregate the conversational flows into the three feature domains and then have a 'master' application which called upon these services when required.This led to a decoupling of the applications feature and nullified any single-points-of-failure.
 

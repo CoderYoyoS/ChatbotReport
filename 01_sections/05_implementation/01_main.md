@@ -62,11 +62,11 @@ data.entry.forEach(function (entry) {
 		});
 ```
 
-To provide a easy means of understanding the functions in the source code, a three type naming convention was used. This approach was used to aid in comprehending how the code worked and what it dealt with. These three types of functions where used to handle communication between three end points. Functions beginning with the word "receive" are used to carry out operations when a request has been sent to the server webhook URL from Facebook. The functions that use the beginning word "handle" are functions used to manage payloads such as templates. Lastly, functions using the name "send" are used to administer data to other end points via the chat bot application. The following sections describes how these functions were implemented in addition with the most importantly used functions as examples.
+To provide a easy means of understanding the functions in the source code, a three type naming convention was used. This approach was used to aid in comprehending how the code worked and what it dealt with. These three types of functions where used to handle communication between three end points. Functions beginning with the word "receive" are used to carry out operations when a request has been sent to the server webhook URL from Facebook. The functions that use the beginning word "handle" are functions used to manage payloads such as templates. Lastly, functions using the name "send" are used to administer data to other end points via the chatbot application. The following sections describes how these functions were implemented in addition with the most importantly used functions as examples.
 
 ### Receive functions
 
-The primary function used in a regular use case is the ```receivedMessage``` function.  This takes in the message event as a parameter and then uses the data to initialise variable values to be used in the code. The most prominently used of these variables is the ```senderID``` with is needed to reply to the user who has interacted with the chat bot. This ID is unique for each Facebook user and is generously passed to other functions within the code.
+The primary function used in a regular use case is the ```receivedMessage``` function.  This takes in the message event as a parameter and then uses the data to initialise variable values to be used in the code. The most prominently used of these variables is the ```senderID``` with is needed to reply to the user who has interacted with the chatbot. This ID is unique for each Facebook user and is generously passed to other functions within the code.
 
 ```
 function receivedMessage(event) {
@@ -109,7 +109,7 @@ function receivedMessage(event) {
 	}
 }
 ```
-The ```recievedPostback``` block is a significantly important function used to handle postbacks sent back from the user when a button or a quick reply is clicked. The postback is defined within the message event and is dealt with accordingly using a switch statement. When the condition is met, the suitable method is then called depending on what postback has been received. The following example illustrates how the chat bot would deal with a postback when a user initiates a conversation for the first time by clicking the ```Get Started``` button.
+The ```recievedPostback``` block is a significantly important function used to handle postbacks sent back from the user when a button or a quick reply is clicked. The postback is defined within the message event and is dealt with accordingly using a switch statement. When the condition is met, the suitable method is then called depending on what postback has been received. The following example illustrates how the chatbot would deal with a postback when a user initiates a conversation for the first time by clicking the ```Get Started``` button.
 
 ```
     function receivedPostback(event) {

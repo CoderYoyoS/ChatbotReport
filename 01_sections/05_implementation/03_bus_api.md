@@ -1,6 +1,6 @@
 ## Application Program Interfaces
 
-As previously touched upon in the system design, three application program interfaces were developed to provide additional information.  Each API was hosted on Heroku and run entirely autonomously from the main application. The following section provides a detailed explanation of the implementation of bus, gym and library APIs and shall be aided with code snippets to further exemplify their functionalities and capabilities.
+As previously mentioned in the system design, three application program interfaces were developed to provide additional information.  Each API was hosted on Heroku and run entirely autonomously from the main application. The following section provides a detailed explanation of the implementation of bus API and because of the similar implementation steps for the remaining other API's(gym and library) the code for their implementation will be excluded from this document. However, should the reader wish to see these implementations, see Appendix ?.All examples shall be aided with code segments to further exemplify the API's functionalities and capabilities.
 
 ### Bus API
 
@@ -26,7 +26,7 @@ The initial dependencies are imported to the ```server.js``` file. These include
     })
 ```
 
-Asforementioned in implementation of the chat bot application server code, the call to the bus API sends two parameters. The bus number parameter is extracted from API.ai and sent to the ```handleApiAiAction```. Also, depending on what action is caught, the bus stop ID of the corresponding bus area is also passed and added as a parameter to the URL.
+As has been aforementioned in implementation of the chatbot application server code, the call to the bus API sends two parameters. The bus number parameter is extracted from API.ai and sent to the ```handleApiAiAction```. Also, depending on what action is caught, the bus stop ID of the corresponding bus area is also passed and added as a parameter to the URL.
 ```
 	var options = {
 		url: "https://aaronapi.herokuapp.com/bus/" + stopId + "/" + busNum + "/", 
