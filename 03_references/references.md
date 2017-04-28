@@ -10,7 +10,9 @@ Issac, L.P. (2014) SQL v NoSQL Database Differences Explained. Available at: htt
 
 Otte, S (2009) Version Control Systems, (Computer Systems and Telematics). Institute of Computer Science Freie Universitat Berlin. Available at: https://pdfs.semanticscholar.org/5093/c4b55ad419379ad22e0c60008f133a2b6e3b.pdf Accessed 24 April 2017.
 
-Usability Testing(2017) Testing Available at:https://www.tutorialspoint.com/software_testing_dictionary/usability_testing.htm Accessed 24 April 2017.
+Usability Testing (2017) Testing Available at:https://www.tutorialspoint.com/software_testing_dictionary/usability_testing.htm Accessed 27 April 2017.
+
+Init.ai Decoded (2017) 11 best messaging platforms for your chatbot or conversational app Available at:https://blog.init.ai/pick-your-platform-wisely-c5ab5bc7555d Accessed 20 April 2017
 
 
 Simplifying Deployment on the Cloud with Heroku." Open Source FOR You, 1 Apr. 2013. General OneFile, go.galegroup.com/ps/i.do?p=ITOF&sw=w&u=itb&v=2.1&id=GALE%7CA324391196&it=r&asid=bb653b9ab5879adbe29b6992c1f9d7dd. [Accessed 3 Apr. 2017].
