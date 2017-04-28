@@ -1,6 +1,6 @@
 ## Application Program Interfaces
 
-As previously mentioned in the system design, three application program interfaces were developed to provide additional information.  Each API was hosted on Heroku and run entirely autonomously from the main application. The following section provides a detailed explanation of the implementation of bus API and because of the similar implementation steps for the remaining other API's(gym and library) the code for their implementation will be excluded from this document. However, should the reader wish to see these implementations, see Appendix ?.All examples shall be aided with code segments to further exemplify the API's functionalities and capabilities.
+As previously mentioned in the system design, three application program interfaces were developed to provide additional information.  Each API was hosted on Heroku and run entirely autonomously from the main application. The following section provides a detailed explanation of the implementation of bus API and because of the similar implementation steps for the remaining other API's(gym and library) the code for their implementation will be excluded from this document. However, should the reader wish to see these implementations, see Appendix 1 for repository links. All examples shall be aided with code segments to further exemplify the API's functionalities and capabilities.
 
 ### Bus API
 
